@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">login</string>
+    <string name="login">login_</string>
+    <string name="login_test">test</string>
+</resources>
