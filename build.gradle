@@ -7,6 +7,12 @@ buildscript {
     ext.rxAndroidVersion = '2.1.0'
     ext.okhttpVersion = '3.8.1'
     ext.rxKotlinVersion = '2.0.0'
+
+    ext.glideVersion = '4.9.0'
+    ext.compileGlideVerion = '4.9.0'
+    ext.recycleVersion = '28.0.0'
+    ext.videocacheVersion = '2.7.0'
+    ext.exoplayerVersion = '2.9.1'
     repositories {
         google()
         jcenter()

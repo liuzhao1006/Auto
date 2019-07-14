@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.syd.auto.base.ui.activity.IBaseMvpActivity;
 import com.syd.auto.camera.presenter.CameraPresenter;
 import com.syd.auto.camera.presenter.view.ICameraView;
+import com.syd.auto.camera.tools.CameraLife;
 
 
 /**
@@ -32,8 +32,13 @@ public class CameraActivity extends IBaseMvpActivity<CameraPresenter> implements
     @Override
     protected void initView(Bundle savedInstanceState) {
         Intent intent = getIntent();
-        String camera = intent.getStringExtra("camera");
-        Toast.makeText(this, camera,Toast.LENGTH_SHORT).show();
+        if(intent != null){
+            String camera = intent.getStringExtra("camera");
+            if(camera != null){
+                Toast.makeText(this, camera,Toast.LENGTH_SHORT).show();
+            }
+        }
+        mPresenter.setVideo(CameraActivity.this, findViewById(R.id.jz_video));
     }
 
     @Override
@@ -49,5 +54,10 @@ public class CameraActivity extends IBaseMvpActivity<CameraPresenter> implements
     @Override
     public void onError() {
 
+    }
+
+    @Override
+    public void showDialog(String test) {
+        Toast.makeText(CameraActivity.this,test,Toast.LENGTH_SHORT).show();
     }
 }

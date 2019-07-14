@@ -35,16 +35,21 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion") {
+    api("com.squareup.retrofit2:retrofit:$retrofitVersion") {
          exclude module: 'okhttp'
     }
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
-    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    api "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    api "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    api "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    api "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    api "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     api 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
+    api "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$compileGlideVerion"
+    api "com.android.support:recyclerview-v7:$recycleVersion"
+    api "com.danikula:videocache:$videocacheVersion"
+    api "com.google.android.exoplayer:exoplayer:$exoplayerVersion"
 }
 repositories {
     google()

@@ -8,5 +8,9 @@
         android:layout_width="match_parent"
         android:text="@string/camera_"
         android:layout_height="wrap_content" />
+    <com.syd.auto.camera.tools.CameraLife
+        android:id="@+id/jz_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
 
 </LinearLayout>

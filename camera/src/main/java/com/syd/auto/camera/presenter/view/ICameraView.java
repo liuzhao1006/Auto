@@ -8,4 +8,5 @@ import com.syd.auto.base.presenter.view.IBaseView;
  * 描述     :
  */
 public interface ICameraView extends IBaseView {
+    void showDialog(String test);
 }
