@@ -4,12 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-
-import com.bumptech.glide.Glide;
 import com.syd.auto.base.ui.activity.IBaseMvpActivity;
 import com.syd.auto.camera.presenter.CameraPresenter;
 import com.syd.auto.camera.presenter.view.ICameraView;
-import com.syd.auto.camera.tools.CameraLife;
 
 
 /**

@@ -45,15 +45,13 @@ public class CameraLife extends CameravdStd {
         super.onTouch(v, event);
         int id = v.getId();
         if (id == R.id.surface_container) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_UP:
-                    if (mChangePosition) {
-                        Log.i(TAG, "Touch screen seek position");
-                    }
-                    if (mChangeVolume) {
-                        Log.i(TAG, "Touch screen change volume");
-                    }
-                    break;
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (mChangePosition) {
+                    Log.i(TAG, "Touch screen seek position");
+                }
+                if (mChangeVolume) {
+                    Log.i(TAG, "Touch screen change volume");
+                }
             }
         }
 
